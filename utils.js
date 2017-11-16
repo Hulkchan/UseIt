@@ -48,24 +48,6 @@ function getSrcByHtml(str){
     return imgArr
 }
 /**
- * 4.删除str中空的img标签
- * @param  {[string]} str html标签的字符串
- * 返回src的数组
- */
-function getSrcByHtml(str){
-    //匹配图片（g表示匹配所有结果i表示区分大小写）
-    var imgReg = /<img.*?(?:>|\/>)/gi;
-    //匹配src属性
-    var srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i;
-    var arr = str.match(imgReg);
-    var imgArr = []
-    for (var i = 0; i < arr.length; i++) {
-        var src = arr[i].match(srcReg);
-        imgArr.push(src[1])
-    }
-    return imgArr
-}
-/**
  * 5.删除str中空的img标签
  * @param  {[type]} str [description]
  * @return {[type]}     [description]
