@@ -1,0 +1,5 @@
+.input-box>.input-box__text{
+    outline: none;
+    height: 60px;
+    line-height: 60px;
+}
